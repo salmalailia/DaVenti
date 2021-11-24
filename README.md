@@ -1,4 +1,4 @@
-# DaVenti E-Bookstore (Error)
+# DaVenti E-Bookstore (Web Hosting Error)
 
 Group Members:
 
