@@ -1,4 +1,4 @@
-# DaVenti
+# DaVenti E-Bookstore
 
 Group Members:
 
