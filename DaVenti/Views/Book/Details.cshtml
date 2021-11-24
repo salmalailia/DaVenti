@@ -1,0 +1,100 @@
+﻿@model DaVenti.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Book ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_book)
+        </dd>
+        <dt>
+            Category ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fk_id_category)
+        </dd>
+
+        <dt>
+            Promo ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fk_id_promo)
+        </dd>
+
+        <dt>
+            Book Title
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_book)
+        </dd>
+
+        <dt>
+            Author
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.author)
+        </dd>
+
+        <dt>
+            Book Price
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price_book)
+        </dd>
+
+        <dt>
+            Pages
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pages)
+        </dd>
+
+        <dt>
+            Date Published
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_published)
+        </dd>
+
+        <dt>
+            Publisher
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.publisher)
+        </dd>
+
+        <dt>
+            Stock
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stock)
+        </dd>
+
+    </dl>
+</div>
+<div class="form-actions no-color col-md-offset-2 col-md-10">
+    <a class="btn btn-warning" onclick="location.href='@Url.Action("Edit", new { id = Model.id_book })';return false;">Edit</a>
+</div>
+
+<div class="form-actions no-color">
+    @Html.ActionLink("Back to List", "Index")
+</div>

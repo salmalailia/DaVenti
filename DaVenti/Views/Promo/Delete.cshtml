@@ -1,0 +1,59 @@
+﻿@model DaVenti.Models.Promo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this promo?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Promo Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_promo)
+        </dd>
+
+        <dt>
+            Discount
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.discount)
+        </dd>
+
+        <dt>
+            Start Discount
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.start_discount)
+        </dd>
+
+        <dt>
+            End Discount
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.end_discount)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color col-md-offset-2 col-md-10">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+        </div>
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,106 @@
+﻿@model DaVenti.Models.Book
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this book?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Book ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_book)
+        </dd>
+        <dt>
+            Category ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fk_id_category)
+        </dd>
+
+        <dt>
+            Promo ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fk_id_promo)
+        </dd>
+
+        <dt>
+            Book Title
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_book)
+        </dd>
+
+        <dt>
+            Author
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.author)
+        </dd>
+
+        <dt>
+            Book Price
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price_book)
+        </dd>
+
+        <dt>
+            Pages
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pages)
+        </dd>
+
+        <dt>
+            Date Published
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_published)
+        </dd>
+
+        <dt>
+            Publisher
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.publisher)
+        </dd>
+
+        <dt>
+            Stock
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stock)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color col-md-offset-2 col-md-10">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+        </div>
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

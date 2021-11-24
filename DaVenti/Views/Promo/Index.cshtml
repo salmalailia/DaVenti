@@ -1,0 +1,54 @@
+﻿@model IEnumerable<DaVenti.Models.Promo>
+
+@{
+    ViewBag.Title = "Promo";
+}
+
+<h2>Promo List</h2>
+
+<a class="btn btn-success pull-right" onclick="location.href='@Url.Action("Create")';return false;">Add New Promo</a>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>
+            Promo ID
+        </th>
+        <th>
+            Promo Name
+        </th>
+        <th>
+            Discount
+        </th>
+        <th>
+            Start Discount
+        </th>
+        <th>
+            End Discount
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.id_promo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.name_promo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.discount)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.start_discount)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.end_discount)
+    </td>
+    <td>
+        <a class="btn btn-warning" onclick="location.href='@Url.Action("Edit", new { id = item.id_promo })';return false;">Edit</a>
+        <a class="btn btn-danger" onclick="location.href='@Url.Action("Delete", new { id = item.id_promo })';return false;">Delete</a>
+    </td>
+</tr>
+}
+
+</table>
